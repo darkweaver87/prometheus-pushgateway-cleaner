@@ -142,3 +142,8 @@ To release a new version, create a new git tag and the Github action will do its
 ## License
 
 [MIT](./license.txt)
+
+# Building
+```bash
+docker buildx build --push -t gcr.io/traefiklabs/prometheus-pushgateway-cleaner:0.5.0 --platform=linux/amd64,linux/arm64 --build-arg GIT_REF=$(git rev-parse HEAD) .
+```

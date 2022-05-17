@@ -15,7 +15,7 @@
                   :main-opts ["-m" "cognitect.test-runner"]}
            ; Build binary
            :native-image
-           {:main-opts ["-m clj.native-image prometheus-pushgateway-cleaner"
+           {:main-opts ["-m" "clj.native-image" "prometheus-pushgateway-cleaner"
                         "--report-unsupported-elements-at-runtime"
                         "-H:+ReportExceptionStackTraces"
                         "--initialize-at-build-time"
@@ -24,4 +24,4 @@
                         "--static"]
             :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
             :extra-deps {clj.native-image/clj.native-image {:git/url "https://github.com/taylorwood/clj.native-image.git"
-                                           :sha "b3823a48be75122b9671c86ce5353a85589ef15f"}}}}}
+                                           :sha "7708e7fd4572459c81f6a6b8e44c96f41cdd92d4"}}}}}
